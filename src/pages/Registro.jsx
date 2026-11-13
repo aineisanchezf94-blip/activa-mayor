@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Registro() {
   const [formData, setFormData] = useState({
@@ -10,15 +10,9 @@ export default function Registro() {
 
   const [mensaje, setMensaje] = useState('');
   // Estado para saludar al usuario si ya está registrado localmente
-  const [usuarioGuardado, setUsuarioGuardado] = useState('');
-
-  // Al cargar el componente, verificamos si ya existe un registro en el navegador
-  useEffect(() => {
-    const nombreExistente = localStorage.getItem('usuario_activa_mayor');
-    if (nombreExistente) {
-      setUsuarioGuardado(nombreExistente);
-    }
-  }, []);
+  const [usuarioGuardado, setUsuarioGuardado] = useState(
+    () => localStorage.getItem('usuario_activa_mayor') || ''
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
