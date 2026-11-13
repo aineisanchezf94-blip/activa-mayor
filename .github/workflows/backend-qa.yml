@@ -49,5 +49,7 @@ jobs:
         run: python manage.py makemigrations cuentas instituciones participantes actividades inscripciones --noinput
       - name: Aplicar migraciones en PostgreSQL
         run: python manage.py migrate --noinput
-      - name: Verificar esquema y migraciones\n        run: python manage.py makemigrations --check --dry-run\n      - name: Ejecutar pruebas
+      - name: Verificar esquema y migraciones
+        run: python manage.py makemigrations --check --dry-run
+      - name: Ejecutar pruebas
         run: python manage.py test --verbosity 2
