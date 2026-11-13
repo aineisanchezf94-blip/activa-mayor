@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // 1. IMPORTAMOS LAS IMÁGENES LOCALES DESDE LA CARPETA ASSETS
 import imgYoga from '../assets/yoga.jpg';
