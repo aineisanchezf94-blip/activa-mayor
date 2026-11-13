@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 // 🌟 IMPORTAMOS LA IMAGEN DE PORTADA DESDE LA CARPETA ASSETS
